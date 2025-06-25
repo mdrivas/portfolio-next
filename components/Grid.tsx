@@ -1,7 +1,20 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const Grid = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <section id="about">
       <BentoGrid className="w-full py-20">

@@ -1,9 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className="py-20 w-full">
       <h1 className="heading">

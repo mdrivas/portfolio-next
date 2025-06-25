@@ -61,6 +61,7 @@ interface WorldProps {
 let numbersOfRings = [0];
 
 export function Globe({ globeConfig, data }: WorldProps) {
+  const [mounted, setMounted] = useState(false);
   const [globeData, setGlobeData] = useState<
     | {
         size: number;
@@ -73,6 +74,10 @@ export function Globe({ globeConfig, data }: WorldProps) {
   >(null);
 
   const globeRef = useRef<ThreeGlobe | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const defaultProps = {
     pointSize: 1,
@@ -92,11 +97,10 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (globeRef.current) {
-      _buildData();
-      _buildMaterial();
-    }
-  }, [globeRef.current]);
+    if (!mounted || !globeRef.current) return;
+    _buildData();
+    _buildMaterial();
+  }, [globeRef.current, mounted]);
 
   const _buildMaterial = () => {
     if (!globeRef.current) return;
@@ -222,6 +226,10 @@ export function Globe({ globeConfig, data }: WorldProps) {
       clearInterval(interval);
     };
   }, [globeRef.current, globeData]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>
