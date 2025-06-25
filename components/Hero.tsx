@@ -1,12 +1,15 @@
+"use client";
+
 import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import Avatar from "./Avatar";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-10 pt-36">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -43,7 +46,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
+            Software Engineer & Graduate Student
           </p>
 
           {/**
@@ -52,12 +55,13 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
+            words="Bridging Technology, Healthcare, and Global Innovation"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+            Hi! I&apos;m Mattheos Drivas, a Full-Stack Software Engineer from
+            California crafting scalable solutions for complex challenges.
           </p>
 
           <a href="#about">
@@ -67,6 +71,23 @@ const Hero = () => {
               position="right"
             />
           </a>
+
+          <div className="mt-14 flex flex-col items-center">
+            <div className="mb-5">
+              <Avatar />
+            </div>
+            <div className="max-w-2xl text-center space-y-2">
+              <p className="text-lg text-gray-300">
+                Currently pursuing my MS in EE/CS at Chapman University while
+                working as a Software Engineer Intern at Commure + Athelas. I
+                speak 6 languages and love building tools that connect people
+                across cultures.
+              </p>
+              <p className="text-sm text-gray-400 mb-2">
+                Based in Orange County, CA 🌴
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
