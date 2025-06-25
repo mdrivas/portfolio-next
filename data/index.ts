@@ -31,7 +31,7 @@ export const gridItems = [
   {
     id: 3,
     title: "My tech stack",
-    description: "Python, React, Cloud Technologies & More",
+    description: "Python, Next.js, GCP, Kubernetes, PostgreSQL & More",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -73,20 +73,6 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Barkle - Daily Dog Breed Game",
-    des: "Developed a Wordle-inspired daily dog breed guessing game using Next.js, tRPC, and TypeScript. Features include user authentication, daily challenges, leaderboards, and community-submitted content. Implemented SEO optimization and Google Analytics, growing the player base to over 300 users.",
-    img: "/barkle.png",
-    iconLists: [
-      "/next.svg",
-      "/ts.svg",
-      "/tail.svg",
-      "/vercel_light.png",
-      "/git.svg",
-    ],
-    link: "https://barkle.vercel.app",
-  },
-  {
-    id: 2,
     title: "Speakeasy - AI-Powered Language Learning Platform",
     des: "Built a modern language learning platform that combines YouTube content with AI-powered features. Implemented interactive video transcripts, smart phrasebook for saving and reviewing content, and multi-language support. Uses Next.js 14, tRPC, PostgreSQL with Drizzle ORM, and integrates OpenAI and Google Cloud services for AI conversations and translations.",
     img: "/speakeasy2.png",
@@ -100,7 +86,7 @@ export const projects = [
     link: "https://learnspeakeasy.com",
   },
   {
-    id: 3,
+    id: 2,
     title: "The Provider's Coach Project",
     des: "Contracted to develop a Next.js web application for healthcare providers offering no-cost coaching services. Implemented Calendly integration for seamless appointment scheduling, responsive design, and SEO optimization. Built with TypeScript, Tailwind CSS, and deployed on Vercel.",
     img: "/pcp.png",
@@ -112,6 +98,20 @@ export const projects = [
       "/vercel_light.png",
     ],
     link: "https://providerscoachproject.org",
+  },
+  {
+    id: 3,
+    title: "Barkle - Daily Dog Breed Game",
+    des: "Developed a Wordle-inspired daily dog breed guessing game using Next.js, tRPC, and TypeScript. Over 1,000 plays. Features include user authentication, daily challenges, leaderboards, and community-submitted content. Implemented SEO optimization and Google Analytics, growing the player base to over 300 users.",
+    img: "/barkle.png",
+    iconLists: [
+      "/next.svg",
+      "/ts.svg",
+      "/tail.svg",
+      "/vercel_light.png",
+      "/git.svg",
+    ],
+    link: "https://barkle.vercel.app",
   },
   {
     id: 4,
