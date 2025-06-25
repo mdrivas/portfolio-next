@@ -1,0 +1,22 @@
+{
+  "name": "Mattheos Drivas Portfolio",
+  "short_name": "MD Portfolio",
+  "description": "Graduate student and software engineer crafting modern web applications",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00042D",
+  "theme_color": "#A76DFC",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+} 

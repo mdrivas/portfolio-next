@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="#00042D"/>
+  
+  <!-- MD Letters -->
+  <path d="M160 160L220 256L160 352M220 256L280 352M280 256L340 352" 
+        stroke="#A76DFC" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="160" cy="160" r="16" fill="#FF00C1"/>
+  <circle cx="340" cy="352" r="16" fill="#F4AC24"/>
+  
+  <!-- Code Brackets -->
+  <path d="M120 200L100 256L120 312M392 200L412 256L392 312" 
+        stroke="#5C1CB2" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import CornerLogo from "@/components/ui/CornerLogo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,6 +11,17 @@ export const metadata: Metadata = {
   title: "Mattheos Drivas - Portfolio",
   description:
     "Graduate student and software engineer crafting modern web applications, exploring sports analytics, and building multilingual solutions with cutting-edge technologies",
+  icons: {
+    icon: [{ url: "/MD-logo.png", type: "image/png" }, { url: "/favicon.ico" }],
+    apple: [{ url: "/MD-logo.png" }],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/MD-logo.png",
+      },
+    ],
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -19,9 +31,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -29,6 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <CornerLogo />
           {children}
         </ThemeProvider>
       </body>

@@ -89,10 +89,10 @@ const Hero = () => {
             </div>
             <div className="max-w-2xl text-center space-y-2">
               <p className="text-lg text-gray-300">
-                Currently pursuing my MS in EE/CS at Chapman University while
-                working as a Software Engineer Intern at Commure + Athelas. I
-                speak 6 languages and love building tools that connect people
-                across cultures.
+                Currently pursuing my MS in Electrical Engineering and Computer
+                Science at Chapman University while working as a Software
+                Engineer Intern at Commure + Athelas. I speak 6 languages and
+                love building tools that connect people across cultures.
               </p>
               <p className="text-sm text-gray-400 mb-2">
                 Based in Orange County, CA 🌴
