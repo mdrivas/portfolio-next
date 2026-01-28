@@ -73,7 +73,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Speakeasy - AI-Powered Language Learning Platform",
+    title: "Speakeasy - Learn To Speak A New Language From Cntent You Love",
     des: "Built a modern language learning platform that combines YouTube content with AI-powered features. Implemented interactive video transcripts, smart phrasebook for saving and reviewing content, and multi-language support. Uses Next.js 14, tRPC, PostgreSQL with Drizzle ORM, and integrates OpenAI and Google Cloud services for AI conversations and translations.",
     img: "/speakeasy2.png",
     iconLists: [
@@ -84,6 +84,15 @@ export const projects = [
       "/git.svg",
     ],
     link: "https://learnspeakeasy.com",
+    featured: true,
+    featuredDes:
+      "Founded and scaled an immersive language learning platform to 10,000+ users and 3-figure MRR in 4 months. Users watch authentic YouTube content with interactive dual-language transcripts, save phrases for spaced repetition review, and practice speaking with AI conversation partners. Built a Chrome extension enabling any YouTube & Netflix video to become a learning experience with client-side subtitle processing. Full-stack Next.js 14 SaaS with tRPC, PostgreSQL, Stripe subscriptions, OpenAI integration, and Google Cloud TTS/translation services.",
+    metrics: [
+      { label: "Users", value: "10K+" },
+      { label: "Timeline", value: "4 months" },
+      { label: "MRR", value: "3-figure" },
+      { label: "Languages", value: "10" },
+    ],
   },
   {
     id: 2,
