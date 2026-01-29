@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Mattheos Drivas} \\ \vspace{1pt}
+    \small \faPhone\ 516-672-1755 $|$ \faEnvelope\ \href{mailto:drivas.matt@gmail.com}{drivas.matt@gmail.com} $|$
+    \faLinkedin\ \href{https://linkedin.com/in/mattheos-drivas-803188276}{LinkedIn} $|$
+    \faGithub\ \href{https://github.com/mdrivas}{GitHub} $|$
+    \faGlobe\ \href{https://mattheosdrivas.com}{mattheosdrivas.com}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Software engineer and current M.S. in Computer Science student building scalable systems across healthtech, AI, and consumer applications. Experience developing software for \textbf{FDA-cleared} patient monitoring tools at Commure. Founded Speakeasy, scaling to \textbf{10,000+ users} in \textbf{4 months} with \textbf{3-figure MRR} by building full-stack infrastructure, real-time analytics, and a browser extension with AI-powered voice practice. Combines technical depth in Python, TypeScript, SQL, and data pipelines with proven ability to ship fast, iterate on user feedback, and operate autonomously. Speaks \textbf{six languages} and brings a global perspective shaped by living abroad to building products that solve real problems.}
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Skills \& Frameworks}{: Python, Next.js, TypeScript, JavaScript, Flask, React, SQL} \\
+     \textbf{Software \& Infra}{: REST APIs, GCP, CI/CD, Kubernetes, Postgres, Git/GitHub, Docker, HIPAA compliance} \\
+     \textbf{Hardware}{: Prototyping, Arduino, 3D Printing} \\
+     \textbf{Languages}{: English, Greek, Spanish, Cantonese, Portuguese, Mandarin}
+    }}
+ \end{itemize}
+
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer Intern -- FDA-Approved Medical Device}{May 2024 -- Dec 2025}
+      {Commure (Series F, backed by General Catalyst)}{}
+
+    \vspace{6pt}
+    \hspace{0.15in}\textbf{\small Full Stack \& Infrastructure Engineering}\vspace{-4pt}
+      \resumeItemListStart
+        \resumeItem{Led full-stack \textbf{Stripe integration} with third-party APIs processing \textbf{5-figure monthly orders}, ensuring accurate payments and automated order processing.}
+        \resumeItem{Developed \textbf{HIPAA-compliant} backend services that streamline delivery of lab results and clinical data to providers at over \textbf{40 clinical sites}, leveraging APIs and custom-built tools for efficiency.}
+        \resumeItem{Restored \textbf{CircleCI} pipeline functionality for a key repo and configured \textbf{Kubernetes} secrets, Docker builds, and \textbf{GCP Cloud Run} deployments to support reliable releases.}
+        \resumeItem{Initiated a backend requirements tracking system to improve engineering transparency with product stakeholders.}
+      \resumeItemListEnd
+
+    \vspace{2pt}
+    \hspace{0.15in}\textbf{\small Platform Development \& Device Engineering}\vspace{-4pt}
+      \resumeItemListStart
+        \resumeItem{Validated and tested an FDA-approved blood-monitoring device, supporting \textbf{ISO 13485} compliance and ensuring safe deployment to \textbf{3,000+ patients}.}
+        \resumeItem{Created secure, tokenized onboarding flows bridging Flask APIs with React-based UIs, improving \textbf{Remote Therapy Monitoring (RTM)} sign-up completion rates.}
+        \resumeItem{Contributed across full-stack microservices in a healthcare platform, implementing robust API integrations and maintaining data pipelines.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------ENTREPRENEURIAL & TECHNICAL LEADERSHIP-----------
+\section{Entrepreneurial \& Technical Leadership}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Founder \& Technical Lead}{June 2025 -- Present}
+      {\href{https://learnspeakeasy.com}{Speakeasy}}{}
+      \resumeItemListStart
+        \resumeItem{Scaled novel language learning platform to \textbf{10,000+ users} in \textbf{4 months} and \textbf{3-figure MRR} by building full-stack infrastructure with Next.js, PostgreSQL, and CI/CD pipelines on Vercel}
+        \resumeItem{Managed full product lifecycle from content-driven acquisition to Pro subscriptions, using analytics to drive \textbf{30\%+ retention improvements}}
+        \resumeItem{Architected \textbf{Chrome extension} enabling real-time subtitle translation on \textbf{YouTube/Netflix}, handling cross-origin auth, streaming APIs, and client-side caption processing}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Technical Lead}{February 2025 -- Present}
+      {\href{https://www.providerscoachproject.org/}{The Provider's Coach Project} (Healthcare Nonprofit)}{}
+      \resumeItemListStart
+        \resumeItem{Contracted to develop \textbf{HIPAA-compliant} and no-cost physician coaching platform for over \textbf{20 healthcare providers}.}
+        \resumeItem{Implemented Calendly integration for seamless appointment scheduling, responsive design, and SEO optimization.}
+        \resumeItem{Led platform deployment and CI/CD pipeline setup, collaborating with clinical and board stakeholders to support fundraising goals.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------VOLUNTEER EXPERIENCE-----------
+\section{Volunteer Experience}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Medical Protective Equipment Design and Distribution}}{March 2020 -- September 2020}
+      \resumeItemListStart
+        \resumeItem{Designed, manufactured, and distributed \textbf{900+ units} of medical PPE including face shields, intubation boxes, and face mask clips to frontline healthcare workers in California, New York, and Washington State.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\vspace{-2pt}
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}l@{\extracolsep{\fill}}l}
+  \textbf{Chapman University} $|$ May 2026 & \textbf{Chapman University} $|$ May 2025 & \textbf{Don Quijote} $|$ June 2023 \\
+  \small\textit{M.S. in Electrical Engineering} & \small\textit{B.S. in Computer Science} & \small\textit{Madrid Campus, B2 Certification} \\
+  \small\textit{\& Computer Science} & & \\
+\end{tabular*}
+
+
+%-------------------------------------------
+\end{document}
