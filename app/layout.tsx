@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Mattheos Drivas - Portfolio",
   description:
-    "Graduate student and software engineer crafting modern web applications, exploring sports analytics, and building multilingual solutions with cutting-edge technologies",
+    "Mattheos Drivas Portfolio",
   icons: {
     icon: [{ url: "/MD-logo.png", type: "image/png" }, { url: "/favicon.ico" }],
     apple: [{ url: "/MD-logo.png" }],
@@ -22,6 +22,20 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/manifest.json",
+  openGraph: {
+    title: "Mattheos Drivas - Portfolio",
+    description:
+      "Mattheos Drivas Portfolio",
+    images: [{ url: "/mattpic2.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mattheos Drivas - Portfolio",
+    description:
+      "Mattheos Drivas Portfolio",
+    images: ["/mattpic2.png"],
+  },
 };
 
 export default function RootLayout({
