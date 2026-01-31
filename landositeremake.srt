@@ -1,0 +1,1279 @@
+1
+00:00:00,320 --> 00:00:04,160
+Last week I came across this website and
+
+2
+00:00:02,800 --> 00:00:05,839
+there are two types of people in the
+
+3
+00:00:04,160 --> 00:00:08,480
+world. The first who would just look at
+
+4
+00:00:05,839 --> 00:00:10,960
+this website and be like okay that's a
+
+5
+00:00:08,480 --> 00:00:13,599
+cool site and move on with their life
+
+6
+00:00:10,960 --> 00:00:15,440
+and the second kind which is like me who
+
+7
+00:00:13,599 --> 00:00:18,320
+look at this website and the first
+
+8
+00:00:15,440 --> 00:00:20,960
+thought I had was how hard could it be
+
+9
+00:00:18,320 --> 00:00:21,920
+to recreate it and that's exactly the
+
+10
+00:00:20,960 --> 00:00:24,640
+question I'm going to try and answer
+
+11
+00:00:21,920 --> 00:00:28,160
+today. From my experience coding for a
+
+12
+00:00:24,640 --> 00:00:29,519
+lot of years, I'm pretty sure it's not
+
+13
+00:00:28,160 --> 00:00:34,439
+going to be as simple as you think it
+
+14
+00:00:29,519 --> 00:00:34,439
+is. So, let's find out.
+
+15
+00:00:35,680 --> 00:00:40,239
+This website looks absolutely insane and
+
+16
+00:00:38,480 --> 00:00:42,320
+there's so much we could do. So, I
+
+17
+00:00:40,239 --> 00:00:43,760
+really need to narrow down my focus for
+
+18
+00:00:42,320 --> 00:00:47,280
+the sake of this video. And I'm going to
+
+19
+00:00:43,760 --> 00:00:49,920
+try and recreate this homepage element.
+
+20
+00:00:47,280 --> 00:00:52,239
+So this section which is basically his
+
+21
+00:00:49,920 --> 00:00:54,640
+face moving up and down as you move the
+
+22
+00:00:52,239 --> 00:00:57,360
+mouse and also as I move the mouse the
+
+23
+00:00:54,640 --> 00:00:59,199
+helmet patterns change and it moves
+
+24
+00:00:57,360 --> 00:01:01,280
+according to my cursor and also the
+
+25
+00:00:59,199 --> 00:01:02,960
+background is moving as you can see and
+
+26
+00:01:01,280 --> 00:01:04,799
+I'm going to need all the help possible.
+
+27
+00:01:02,960 --> 00:01:06,560
+So I'm going to open up Chat LM who also
+
+28
+00:01:04,799 --> 00:01:08,799
+the sponsors of this video. Out of all
+
+29
+00:01:06,560 --> 00:01:10,320
+of the models that they offer I think
+
+30
+00:01:08,799 --> 00:01:12,960
+for this case I'm going to use their
+
+31
+00:01:10,320 --> 00:01:15,119
+clots on 4.5. The first step is going to
+
+32
+00:01:12,960 --> 00:01:17,520
+be to plan. So, I'm going to first
+
+33
+00:01:15,119 --> 00:01:19,600
+figure out what is the laziest way that
+
+34
+00:01:17,520 --> 00:01:21,759
+I can recreate his website. I'm hoping
+
+35
+00:01:19,600 --> 00:01:23,680
+to be able to copy out all of the HTML
+
+36
+00:01:21,759 --> 00:01:25,520
+CSS. I'm going to use the microphone
+
+37
+00:01:23,680 --> 00:01:29,040
+mode instead of typing it out cuz I just
+
+38
+00:01:25,520 --> 00:01:31,119
+find it so much easier.
+
+39
+00:01:29,040 --> 00:01:32,720
+Okay, the first option is browser dev
+
+40
+00:01:31,119 --> 00:01:35,439
+tools, which is the laziest mode where I
+
+41
+00:01:32,720 --> 00:01:37,840
+just copy paste all of the HTML and the
+
+42
+00:01:35,439 --> 00:01:39,200
+index files as well. So, this is what I
+
+43
+00:01:37,840 --> 00:01:41,040
+was thinking of, but maybe there's a
+
+44
+00:01:39,200 --> 00:01:42,159
+faster way for me to do that. We know
+
+45
+00:01:41,040 --> 00:01:44,320
+where to start. I'm going to use this
+
+46
+00:01:42,159 --> 00:01:46,720
+command, run it on my terminal, and try
+
+47
+00:01:44,320 --> 00:01:49,960
+to copy paste his exact website, try to
+
+48
+00:01:46,720 --> 00:01:49,960
+run it locally.
+
+49
+00:01:53,840 --> 00:01:57,200
+Yeah, I remember when I was an idiot and
+
+50
+00:01:55,600 --> 00:01:59,040
+I said that we could probably just copy
+
+51
+00:01:57,200 --> 00:02:01,360
+the files. That's clearly not what we
+
+52
+00:01:59,040 --> 00:02:04,399
+can do. So, I did try to clone
+
+53
+00:02:01,360 --> 00:02:06,399
+everything and of course, as expected, I
+
+54
+00:02:04,399 --> 00:02:08,879
+tried to run the index file on the
+
+55
+00:02:06,399 --> 00:02:10,160
+browser directly, the easiest way. It
+
+56
+00:02:08,879 --> 00:02:11,680
+was obviously not going to work the
+
+57
+00:02:10,160 --> 00:02:14,879
+first time around because the first
+
+58
+00:02:11,680 --> 00:02:16,959
+error we got was 43 from the server. So
+
+59
+00:02:14,879 --> 00:02:18,480
+that's essentially they're giving us a
+
+60
+00:02:16,959 --> 00:02:20,640
+forbidden error for the external
+
+61
+00:02:18,480 --> 00:02:23,360
+JavaScript which makes total sense why
+
+62
+00:02:20,640 --> 00:02:25,920
+they would want to protect that and it
+
+63
+00:02:23,360 --> 00:02:28,959
+probably just allows requests that come
+
+64
+00:02:25,920 --> 00:02:30,720
+only from landonor.com server and they
+
+65
+00:02:28,959 --> 00:02:32,480
+block requests that come from any other
+
+66
+00:02:30,720 --> 00:02:34,560
+server. Another problem that I was
+
+67
+00:02:32,480 --> 00:02:36,239
+getting was that these RI files were not
+
+68
+00:02:34,560 --> 00:02:38,400
+being loaded properly. And even though I
+
+69
+00:02:36,239 --> 00:02:40,319
+copied them over manually, it's still
+
+70
+00:02:38,400 --> 00:02:42,959
+not working because this is supposed to
+
+71
+00:02:40,319 --> 00:02:44,959
+load the animations, but somehow not
+
+72
+00:02:42,959 --> 00:02:47,200
+still loading. I'm going to go back to
+
+73
+00:02:44,959 --> 00:02:50,959
+Claude and try to brainstorm other ways
+
+74
+00:02:47,200 --> 00:02:54,400
+for me to do this in a lazy way. Yes, we
+
+75
+00:02:50,959 --> 00:02:55,360
+hit a blocker, but I feel like this will
+
+76
+00:02:54,400 --> 00:02:57,040
+go somewhere.
+
+77
+00:02:55,360 --> 00:02:59,760
+>> A few moments later.
+
+78
+00:02:57,040 --> 00:03:01,519
+>> Oh my god, it actually works. Let me
+
+79
+00:02:59,760 --> 00:03:03,680
+explain to you guys how I fixed it. I
+
+80
+00:03:01,519 --> 00:03:06,400
+did start off by mirroring the site with
+
+81
+00:03:03,680 --> 00:03:09,040
+wget, but this only ended up getting the
+
+82
+00:03:06,400 --> 00:03:11,680
+HTML and the CSS. While it was good
+
+83
+00:03:09,040 --> 00:03:13,840
+enough, this particular site actually
+
+84
+00:03:11,680 --> 00:03:17,120
+has a lot of heavy reliance on
+
+85
+00:03:13,840 --> 00:03:19,040
+JavaScript and 3D web. So, these were
+
+86
+00:03:17,120 --> 00:03:21,760
+kind of two separate problems. I
+
+87
+00:03:19,040 --> 00:03:24,000
+realized to get all of the JavaScript, I
+
+88
+00:03:21,760 --> 00:03:26,080
+actually had to manually download all of
+
+89
+00:03:24,000 --> 00:03:28,879
+the files. And then when it came to the
+
+90
+00:03:26,080 --> 00:03:30,720
+3D WebGL, this turned out to be quite a
+
+91
+00:03:28,879 --> 00:03:32,879
+heavy part. There were a bunch of things
+
+92
+00:03:30,720 --> 00:03:35,120
+used. So they basically had decoders,
+
+93
+00:03:32,879 --> 00:03:37,120
+they had 3D models, they had textures,
+
+94
+00:03:35,120 --> 00:03:39,519
+lighting, all of these. And I had to
+
+95
+00:03:37,120 --> 00:03:41,920
+manually fetch them and store them
+
+96
+00:03:39,519 --> 00:03:43,760
+locally for this whole thing to work.
+
+97
+00:03:41,920 --> 00:03:45,599
+But it wasn't too much effort. It was
+
+98
+00:03:43,760 --> 00:03:47,760
+mostly just a lot of looking where's the
+
+99
+00:03:45,599 --> 00:03:49,599
+error, downloading the file, the errors,
+
+100
+00:03:47,760 --> 00:03:51,920
+looking again, what file is erroring,
+
+101
+00:03:49,599 --> 00:03:53,200
+and that whole loop again and again. But
+
+102
+00:03:51,920 --> 00:03:56,000
+now we're at the stage where I actually
+
+103
+00:03:53,200 --> 00:04:00,760
+have the entire website running locally.
+
+104
+00:03:56,000 --> 00:04:00,760
+Huh? It was working. What changed?
+
+105
+00:04:01,040 --> 00:04:04,799
+I really should go sleep. But I'm facing
+
+106
+00:04:03,439 --> 00:04:06,400
+this really weird issue. Let me try to
+
+107
+00:04:04,799 --> 00:04:07,760
+explain to you what's happening. So I'm
+
+108
+00:04:06,400 --> 00:04:10,080
+going to refresh my page with the
+
+109
+00:04:07,760 --> 00:04:12,959
+inspect tab open. And everything works
+
+110
+00:04:10,080 --> 00:04:16,479
+fine. Right. I close it. I refresh
+
+111
+00:04:12,959 --> 00:04:20,720
+again. And it seems to work. But once I
+
+112
+00:04:16,479 --> 00:04:22,960
+close the inspect, it stops loading. And
+
+113
+00:04:20,720 --> 00:04:26,080
+then I go back to the console logs and
+
+114
+00:04:22,960 --> 00:04:27,600
+there's errors about failing to load the
+
+115
+00:04:26,080 --> 00:04:29,120
+resources.
+
+116
+00:04:27,600 --> 00:04:30,880
+Super weird. Never experienced something
+
+117
+00:04:29,120 --> 00:04:32,800
+like this. I have a feeling this has to
+
+118
+00:04:30,880 --> 00:04:35,759
+do with loading issues. I decided to
+
+119
+00:04:32,800 --> 00:04:38,240
+explain it to the LLM and it actually
+
+120
+00:04:35,759 --> 00:04:41,280
+suggests that it's a caching a timing
+
+121
+00:04:38,240 --> 00:04:44,400
+issue. I do have a a ton of assets in
+
+122
+00:04:41,280 --> 00:04:46,320
+the code like not even just images so
+
+123
+00:04:44,400 --> 00:04:48,880
+many different JS files that I have
+
+124
+00:04:46,320 --> 00:04:53,640
+downloaded. So all that could be causing
+
+125
+00:04:48,880 --> 00:04:56,400
+my Chrome to behave really slowly.
+
+126
+00:04:53,640 --> 00:04:58,639
+[Music]
+
+127
+00:04:56,400 --> 00:05:00,639
+It's happening in Safari as well. Like
+
+128
+00:04:58,639 --> 00:05:02,400
+the moment I close the inspect tab, it
+
+129
+00:05:00,639 --> 00:05:04,240
+stops loading.
+
+130
+00:05:02,400 --> 00:05:05,280
+Okay, I really need to go to sleep. I'm
+
+131
+00:05:04,240 --> 00:05:06,880
+going to come back to this tomorrow
+
+132
+00:05:05,280 --> 00:05:11,960
+morning and then we're going to try and
+
+133
+00:05:06,880 --> 00:05:11,960
+fix this and figure out what's going on.
+
+134
+00:05:14,000 --> 00:05:18,320
+It's a new day, but the same problem.
+
+135
+00:05:16,639 --> 00:05:20,880
+I'm going to give myself half an hour
+
+136
+00:05:18,320 --> 00:05:22,880
+this morning, try and fix this stupid
+
+137
+00:05:20,880 --> 00:05:25,120
+issue where it only works in the inspect
+
+138
+00:05:22,880 --> 00:05:26,960
+mode, and hopefully we find a solution.
+
+139
+00:05:25,120 --> 00:05:28,720
+If we don't, then I'm going to have to
+
+140
+00:05:26,960 --> 00:05:35,080
+regroup
+
+141
+00:05:28,720 --> 00:05:35,080
+and think of how we proceed next.
+
+142
+00:05:35,360 --> 00:05:39,840
+I fixed it. It works. So the issue was
+
+143
+00:05:37,759 --> 00:05:42,080
+that the moment the screen got wider, it
+
+144
+00:05:39,840 --> 00:05:44,000
+actually needed to load more textures
+
+145
+00:05:42,080 --> 00:05:47,199
+because the animation changes depending
+
+146
+00:05:44,000 --> 00:05:50,479
+on the responsiveness of the website and
+
+147
+00:05:47,199 --> 00:05:52,880
+there was one package that I was missing
+
+148
+00:05:50,479 --> 00:05:56,320
+and it wasn't loading correctly when the
+
+149
+00:05:52,880 --> 00:05:58,400
+size was a bit larger. So had to do
+
+150
+00:05:56,320 --> 00:06:00,400
+quite a bit of debugging with that. But
+
+151
+00:05:58,400 --> 00:06:03,440
+eventually we reached a stage where I'm
+
+152
+00:06:00,400 --> 00:06:05,360
+able to load the site locally. And I
+
+153
+00:06:03,440 --> 00:06:07,919
+also tried to remove all of the assets
+
+154
+00:06:05,360 --> 00:06:10,720
+that I don't need from this hero
+
+155
+00:06:07,919 --> 00:06:12,639
+section. So if I try to scroll like I'm
+
+156
+00:06:10,720 --> 00:06:14,080
+trying right now, there's nothing that I
+
+157
+00:06:12,639 --> 00:06:16,400
+see in the rest of the website.
+
+158
+00:06:14,080 --> 00:06:18,960
+Everything is kind of empty. Okay. Other
+
+159
+00:06:16,400 --> 00:06:22,639
+than this part, I didn't remove it. So
+
+160
+00:06:18,960 --> 00:06:25,440
+now I can tweak what we have now to make
+
+161
+00:06:22,639 --> 00:06:27,600
+it look like something that would fit in
+
+162
+00:06:25,440 --> 00:06:29,520
+my portfolio website. The first thing I
+
+163
+00:06:27,600 --> 00:06:32,639
+need is an image. I'm going to use AI to
+
+164
+00:06:29,520 --> 00:06:35,759
+help me generate that. and Bucky Chat LM
+
+165
+00:06:32,639 --> 00:06:37,199
+also allows me to create images. So, I'm
+
+166
+00:06:35,759 --> 00:06:39,600
+going to use out of all of the different
+
+167
+00:06:37,199 --> 00:06:42,080
+models that they have. Probably going to
+
+168
+00:06:39,600 --> 00:06:44,560
+use N Banana actually. So, I'm going to
+
+169
+00:06:42,080 --> 00:06:46,400
+take a photo of myself first. I took a
+
+170
+00:06:44,560 --> 00:06:48,880
+photo with three different angles and
+
+171
+00:06:46,400 --> 00:06:51,360
+I'm going to give it to Nano Banana
+
+172
+00:06:48,880 --> 00:06:54,319
+along with Lando Norris's image so that
+
+173
+00:06:51,360 --> 00:06:56,240
+it can potentially create an image that
+
+174
+00:06:54,319 --> 00:06:59,400
+looks sort of like his but it's my face
+
+175
+00:06:56,240 --> 00:06:59,400
+on it.
+
+176
+00:07:00,240 --> 00:07:04,720
+Now, before using Nano Banana to
+
+177
+00:07:01,919 --> 00:07:06,319
+generate the AI image of myself, I need
+
+178
+00:07:04,720 --> 00:07:08,639
+to create a prompt that I can send to
+
+179
+00:07:06,319 --> 00:07:10,240
+Nan Banana. I'm going to use GPT5 to
+
+180
+00:07:08,639 --> 00:07:11,840
+help me create it because I think it's
+
+181
+00:07:10,240 --> 00:07:14,720
+pretty good in creating prompts that you
+
+182
+00:07:11,840 --> 00:07:17,039
+can send to other LLMs or other models.
+
+183
+00:07:14,720 --> 00:07:20,080
+It has the finalized prompt. I'm going
+
+184
+00:07:17,039 --> 00:07:21,840
+to copy paste it here. In the meanwhile,
+
+185
+00:07:20,080 --> 00:07:23,680
+I'm going to try and modify all of the
+
+186
+00:07:21,840 --> 00:07:26,319
+text of this, like remove things like
+
+187
+00:07:23,680 --> 00:07:29,039
+his name, these side elements, the
+
+188
+00:07:26,319 --> 00:07:30,800
+McLaren logo and stuff, cuz I want this
+
+189
+00:07:29,039 --> 00:07:32,720
+to be more like my site, so I don't
+
+190
+00:07:30,800 --> 00:07:34,479
+really need all this. These are the
+
+191
+00:07:32,720 --> 00:07:37,360
+images generated. They look pretty
+
+192
+00:07:34,479 --> 00:07:39,120
+blurry, so I've asked it to come up with
+
+193
+00:07:37,360 --> 00:07:40,720
+more ones that are higher resolution.
+
+194
+00:07:39,120 --> 00:07:42,400
+Technically, it did do what we asked it
+
+195
+00:07:40,720 --> 00:07:45,199
+to do. It did combine the Landon Norris
+
+196
+00:07:42,400 --> 00:07:48,080
+image with my images, but I want it to
+
+197
+00:07:45,199 --> 00:07:50,720
+look a bit more professional. Okay, now
+
+198
+00:07:48,080 --> 00:07:52,720
+it just gave me something that looks
+
+199
+00:07:50,720 --> 00:07:54,240
+nothing like me. I'm going to try and
+
+200
+00:07:52,720 --> 00:07:56,319
+come up with a different prompt to fix
+
+201
+00:07:54,240 --> 00:07:58,720
+this. So far, I've removed all of the
+
+202
+00:07:56,319 --> 00:08:00,319
+random buttons here. Removed it. Okay,
+
+203
+00:07:58,720 --> 00:08:02,400
+perfect. Now, I want to try and replace
+
+204
+00:08:00,319 --> 00:08:04,160
+his face with mine. Hopefully, it's just
+
+205
+00:08:02,400 --> 00:08:05,840
+an image change, but maybe it's
+
+206
+00:08:04,160 --> 00:08:07,440
+something more than that. I asked you to
+
+207
+00:08:05,840 --> 00:08:09,759
+come up with a funky sweater and it came
+
+208
+00:08:07,440 --> 00:08:11,120
+up with this. I think it looks cool. I'm
+
+209
+00:08:09,759 --> 00:08:14,160
+going to go ahead with this image, but
+
+210
+00:08:11,120 --> 00:08:17,039
+we need to convert it to webp style. So,
+
+211
+00:08:14,160 --> 00:08:18,720
+let's open another tab of chat lm. Now,
+
+212
+00:08:17,039 --> 00:08:24,500
+going back to what's the fastest way to
+
+213
+00:08:18,720 --> 00:08:26,000
+convert a PNG or JPEG into WEBP format.
+
+214
+00:08:24,500 --> 00:08:28,560
+[Music]
+
+215
+00:08:26,000 --> 00:08:31,840
+Great. I have it in WEBP format now. So,
+
+216
+00:08:28,560 --> 00:08:33,440
+I'm going to push this over in my code.
+
+217
+00:08:31,840 --> 00:08:37,519
+Is the moment of truth. I'm going to
+
+218
+00:08:33,440 --> 00:08:40,919
+open it incognito tab.
+
+219
+00:08:37,519 --> 00:08:43,519
+go to my local host.
+
+220
+00:08:40,919 --> 00:08:47,360
+[Music]
+
+221
+00:08:43,519 --> 00:08:51,120
+Oh, my image appears. Okay, clearly it's
+
+222
+00:08:47,360 --> 00:08:52,959
+not the right fit, but the gist is
+
+223
+00:08:51,120 --> 00:08:55,600
+there, but there's like this weird
+
+224
+00:08:52,959 --> 00:08:58,480
+overlay on top of my face, like some
+
+225
+00:08:55,600 --> 00:09:00,640
+kind of weird dirt effect, so the skin
+
+226
+00:08:58,480 --> 00:09:02,399
+looks really dirty. It wasn't as simple
+
+227
+00:09:00,640 --> 00:09:05,440
+as just changing the image. I also had
+
+228
+00:09:02,399 --> 00:09:07,200
+to modify some of these KTX2
+
+229
+00:09:05,440 --> 00:09:08,320
+files as well. Okay, let me try to show
+
+230
+00:09:07,200 --> 00:09:09,920
+you what I'm trying to fix here. So,
+
+231
+00:09:08,320 --> 00:09:13,519
+this is what Lando's website looks like
+
+232
+00:09:09,920 --> 00:09:15,519
+where his face is pretty perfect fit to
+
+233
+00:09:13,519 --> 00:09:16,720
+the center of the screen. And currently,
+
+234
+00:09:15,519 --> 00:09:19,200
+this is what mine looks like. So,
+
+235
+00:09:16,720 --> 00:09:22,160
+clearly the rest of my face here is not
+
+236
+00:09:19,200 --> 00:09:24,880
+visible. And after looking at the code,
+
+237
+00:09:22,160 --> 00:09:27,279
+I realized that this is probably because
+
+238
+00:09:24,880 --> 00:09:29,519
+in the webp file, the way that a lot of
+
+239
+00:09:27,279 --> 00:09:31,519
+these assets are loaded, they tend to
+
+240
+00:09:29,519 --> 00:09:35,040
+have this alpha
+
+241
+00:09:31,519 --> 00:09:37,279
+uh base layer followed by a depth, which
+
+242
+00:09:35,040 --> 00:09:39,120
+gives you that 3D effect. But I do need
+
+243
+00:09:37,279 --> 00:09:42,399
+to modify all of these other things as
+
+244
+00:09:39,120 --> 00:09:43,440
+well, like this roughness. a few moments
+
+245
+00:09:42,399 --> 00:09:44,959
+later.
+
+246
+00:09:43,440 --> 00:09:47,200
+>> So, I tried a bunch of different things
+
+247
+00:09:44,959 --> 00:09:48,800
+in these next few hours, like trying to
+
+248
+00:09:47,200 --> 00:09:50,399
+fix the texture, but I ended up breaking
+
+249
+00:09:48,800 --> 00:09:52,320
+it a couple of times. Like, this looks
+
+250
+00:09:50,399 --> 00:09:54,560
+horrible. And then finally, what worked
+
+251
+00:09:52,320 --> 00:09:57,040
+was going on Canva and creating a custom
+
+252
+00:09:54,560 --> 00:09:58,560
+shadow, which now looks so much better
+
+253
+00:09:57,040 --> 00:10:00,399
+than what we had before. Like, my face
+
+254
+00:09:58,560 --> 00:10:02,720
+is not blocked anymore. Then, I wanted
+
+255
+00:10:00,399 --> 00:10:05,040
+to fix the helmet colors to match my
+
+256
+00:10:02,720 --> 00:10:07,040
+style. So, I used AI to create that for
+
+257
+00:10:05,040 --> 00:10:08,320
+me. But, I wasn't entirely happy with
+
+258
+00:10:07,040 --> 00:10:10,880
+how it looked because there were so many
+
+259
+00:10:08,320 --> 00:10:12,880
+McLaren logos. So then I went on Canva,
+
+260
+00:10:10,880 --> 00:10:14,560
+manually went to edit things out that I
+
+261
+00:10:12,880 --> 00:10:16,560
+didn't like, modified all of these
+
+262
+00:10:14,560 --> 00:10:19,519
+different things, and then we ended up
+
+263
+00:10:16,560 --> 00:10:20,959
+with ta. I think it looks really not
+
+264
+00:10:19,519 --> 00:10:22,560
+bad. Like there's quite a few things to
+
+265
+00:10:20,959 --> 00:10:24,160
+fix, but let's talk about the positives
+
+266
+00:10:22,560 --> 00:10:26,079
+first. Like when I hover over the
+
+267
+00:10:24,160 --> 00:10:27,680
+helmet, I'm really happy with the design
+
+268
+00:10:26,079 --> 00:10:29,600
+of the helmet. You see Life of Gors
+
+269
+00:10:27,680 --> 00:10:31,200
+there. I love the color. I love the
+
+270
+00:10:29,600 --> 00:10:33,600
+design that we've come up with and also
+
+271
+00:10:31,200 --> 00:10:35,760
+removing all of the logos. So really
+
+272
+00:10:33,600 --> 00:10:37,839
+happy with that. And as I move my face
+
+273
+00:10:35,760 --> 00:10:39,920
+up and down, the transition's really
+
+274
+00:10:37,839 --> 00:10:41,440
+smooth. And I'm quite proud of that. And
+
+275
+00:10:39,920 --> 00:10:43,440
+also able to view all of my different
+
+276
+00:10:41,440 --> 00:10:45,920
+hair strands, everything. And the
+
+277
+00:10:43,440 --> 00:10:47,600
+background also looks really good. We
+
+278
+00:10:45,920 --> 00:10:50,079
+didn't manage to break the animations in
+
+279
+00:10:47,600 --> 00:10:53,120
+the background. So that's a success in
+
+280
+00:10:50,079 --> 00:10:54,800
+my books. Now, what can be fixed?
+
+281
+00:10:53,120 --> 00:10:56,880
+There's definitely a weird texture on
+
+282
+00:10:54,800 --> 00:10:58,959
+top of my face that you can see as well,
+
+283
+00:10:56,880 --> 00:11:01,519
+both on my nose, the top part of my
+
+284
+00:10:58,959 --> 00:11:03,040
+forehead, and also the neck. I presume
+
+285
+00:11:01,519 --> 00:11:05,920
+this comes from the shadow effect from
+
+286
+00:11:03,040 --> 00:11:08,640
+Lando's beard. And since I don't have a
+
+287
+00:11:05,920 --> 00:11:10,240
+beard, I do need to remove this whole
+
+288
+00:11:08,640 --> 00:11:12,240
+shadow effect. And that's the downside
+
+289
+00:11:10,240 --> 00:11:15,200
+when you copy someone's code instead of
+
+290
+00:11:12,240 --> 00:11:16,959
+building something yourself. As I scroll
+
+291
+00:11:15,200 --> 00:11:19,040
+down, there is another thing that I'm
+
+292
+00:11:16,959 --> 00:11:21,120
+quite proud of, which is this whole
+
+293
+00:11:19,040 --> 00:11:23,360
+effect. And this would fit so well in a
+
+294
+00:11:21,120 --> 00:11:25,360
+portfolio website. And I know the image
+
+295
+00:11:23,360 --> 00:11:27,920
+itself looks dirty. Again, we need to
+
+296
+00:11:25,360 --> 00:11:30,480
+fix that. But if you just think of it
+
+297
+00:11:27,920 --> 00:11:31,839
+conceptually, this was really amazing.
+
+298
+00:11:30,480 --> 00:11:33,680
+So I'm really proud of what we have come
+
+299
+00:11:31,839 --> 00:11:35,839
+up with and I feel a lot more confident
+
+300
+00:11:33,680 --> 00:11:39,519
+to work on top of this project and
+
+301
+00:11:35,839 --> 00:11:41,519
+modify it to add new things. It's like
+
+302
+00:11:39,519 --> 00:11:43,519
+dark outside already. I don't know if
+
+303
+00:11:41,519 --> 00:11:45,120
+you can tell how exhausted I am. This is
+
+304
+00:11:43,519 --> 00:11:47,440
+another silly project, but I don't think
+
+305
+00:11:45,120 --> 00:11:49,600
+it was that silly after all because I do
+
+306
+00:11:47,440 --> 00:11:52,000
+feel like I learned new stuff. I learned
+
+307
+00:11:49,600 --> 00:11:56,160
+about new libraries that are used in
+
+308
+00:11:52,000 --> 00:11:57,920
+motion animations as well as 3D effects.
+
+309
+00:11:56,160 --> 00:12:00,160
+And most importantly, thank you so much
+
+310
+00:11:57,920 --> 00:12:02,000
+Chat LM for sponsoring this video. They
+
+311
+00:12:00,160 --> 00:12:04,399
+have a bunch of models, whether it's
+
+312
+00:12:02,000 --> 00:12:06,160
+textbased models or image models. And
+
+313
+00:12:04,399 --> 00:12:08,240
+they also have their own deep agent. And
+
+314
+00:12:06,160 --> 00:12:10,480
+you get access to all of these models at
+
+315
+00:12:08,240 --> 00:12:11,839
+a very, very low cost price. So
+
+316
+00:12:10,480 --> 00:12:13,279
+definitely check them out in the link in
+
+317
+00:12:11,839 --> 00:12:14,160
+the description box below. And with that
+
+318
+00:12:13,279 --> 00:12:15,360
+being said, thank you so much for
+
+319
+00:12:14,160 --> 00:12:17,519
+watching. I will see you in the next
+
+320
+00:12:15,360 --> 00:12:17,519
+one.
