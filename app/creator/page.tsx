@@ -391,8 +391,8 @@ export default function CreatorPage() {
             <div className="space-y-5 text-stone-700 text-lg md:text-xl leading-relaxed">
               <p>
                 A language learning content creator based in California. For the
-                past two years I've been making language learning content on
-                YouTube. That's grown into{" "}
+                past two years I&apos;ve been making language learning content on
+                YouTube. That&apos;s grown into{" "}
                 <span className="font-semibold text-stone-900">
                   65 videos, 15K+ subscribers, and 7.45M+ lifetime views
                 </span>
@@ -401,8 +401,8 @@ export default function CreatorPage() {
               <p>
                 What started as documenting my own journey through six languages
                 has grown into a channel brands now reach out for. The audience
-                watches because it's real. I'm ordering food in Cantonese in
-                Hong Kong, learning my grandmother's Greek dialect, surprising
+                watches because it&apos;s real. I&apos;m ordering food in Cantonese in
+                Hong Kong, learning my grandmother&apos;s Greek dialect, surprising
                 strangers in their native languages. Recent uploads pull{" "}
                 <span className="font-semibold text-stone-900">
                   150K+ views in a single month
@@ -410,6 +410,7 @@ export default function CreatorPage() {
                 .
               </p>
               <div className="flex items-start gap-4 rounded-2xl border border-stone-200 bg-white/70 p-5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/creator/speakeasy-logo.png"
                   alt="Speakeasy"
@@ -650,7 +651,7 @@ export default function CreatorPage() {
             viewport={{ once: true }}
             className="text-stone-500 text-xs tracking-[0.3em] uppercase mb-6"
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
