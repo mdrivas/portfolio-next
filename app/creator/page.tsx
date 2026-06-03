@@ -379,7 +379,7 @@ export default function CreatorPage() {
               className={`${playfair.className} text-stone-900 text-4xl md:text-5xl mb-8 leading-tight`}
               style={{ fontWeight: 700 }}
             >
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span
                 className="italic text-rose-600"
                 style={{ fontWeight: 500 }}
