@@ -431,7 +431,7 @@ export default function CreatorPage() {
                 I&apos;ve documented my journey through learning six languages,
                 ordering in Cantonese in Hong Kong, learning my
                 grandmother&apos;s Greek, surprising strangers in their native
-                tongue. I've created over{" "}
+                tongue. I&apos;ve created over{" "}
                 <span className="font-semibold text-stone-900">
                   65 videos, 20K+ cumulative subscribers, and 8M+ lifetime views
                 </span>
@@ -476,68 +476,73 @@ export default function CreatorPage() {
 
       {/* ─── Organic Reach (Instagram) — DISABLED for now. Flip `false` to `true` below to re-enable. ─── */}
       {false && (
-      <section className="py-20 md:py-28 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-stone-500 text-sm tracking-[0.25em] uppercase mb-4 text-center font-medium"
-          >
-            Organic Reach
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className={`${playfair.className} text-stone-900 text-4xl md:text-6xl text-center mb-6`}
-            style={{ fontWeight: 700 }}
-          >
-            Short-form that{" "}
-            <span className="italic text-rose-600" style={{ fontWeight: 500 }}>
-              performs
-            </span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.15 }}
-            className="text-stone-600 text-base md:text-lg text-center max-w-2xl mx-auto mb-16"
-          >
-            A few of my organic reels — the same hooks and on-camera energy I
-            bring to brand work.
-          </motion.p>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {IG_REELS.map((reel, i) => (
-              <motion.div
-                key={reel.shortcode}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+        <section className="py-20 md:py-28 px-6 md:px-12">
+          <div className="max-w-6xl mx-auto">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-stone-500 text-sm tracking-[0.25em] uppercase mb-4 text-center font-medium"
+            >
+              Organic Reach
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className={`${playfair.className} text-stone-900 text-4xl md:text-6xl text-center mb-6`}
+              style={{ fontWeight: 700 }}
+            >
+              Short-form that{" "}
+              <span
+                className="italic text-rose-600"
+                style={{ fontWeight: 500 }}
               >
-                <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg ring-1 ring-stone-900/5">
-                  {reel.views && (
-                    <span className="absolute top-3 left-3 z-10 rounded-full bg-rose-600 px-3 py-1 text-white text-xs font-bold shadow-lg pointer-events-none">
-                      {reel.views} views
-                    </span>
-                  )}
-                  <div className="aspect-[9/16]">
-                    <iframe
-                      src={`https://www.instagram.com/reel/${reel.shortcode}/embed/`}
-                      className="w-full h-full"
-                      allowFullScreen
-                    />
+                performs
+              </span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="text-stone-600 text-base md:text-lg text-center max-w-2xl mx-auto mb-16"
+            >
+              A few of my organic reels — the same hooks and on-camera energy I
+              bring to brand work.
+            </motion.p>
+
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+              {IG_REELS.map((reel, i) => (
+                <motion.div
+                  key={reel.shortcode}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
+                  <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg ring-1 ring-stone-900/5">
+                    {reel.views && (
+                      <span className="absolute top-3 left-3 z-10 rounded-full bg-rose-600 px-3 py-1 text-white text-xs font-bold shadow-lg pointer-events-none">
+                        {reel.views} views
+                      </span>
+                    )}
+                    <div className="aspect-[9/16]">
+                      <iframe
+                        src={`https://www.instagram.com/reel/${reel.shortcode}/embed/`}
+                        className="w-full h-full"
+                        allowFullScreen
+                      />
+                    </div>
                   </div>
-                </div>
-                <p className="text-stone-600 text-sm mt-3 px-1">{reel.note}</p>
-              </motion.div>
-            ))}
+                  <p className="text-stone-600 text-sm mt-3 px-1">
+                    {reel.note}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
 
       {/* ─── Sample Work / Demos ──────────────────────────────────────────── */}
