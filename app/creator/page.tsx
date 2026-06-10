@@ -81,29 +81,66 @@ const FEATURED_VIDEOS = [
 
 const SERVICES = [
   {
-    title: "UGC Short-Form Video",
+    title: "Multi-Language Delivery",
     description:
-      "60–90s authentic content delivered for your brand's channels. Hook → teach → payoff format that performs in feed and paid ads.",
-    accent: "border-l-rose-400",
+      "Have a global audience? I can deliver videos in up to 6 languages from a single shoot. Spanish, Mandarin, Cantonese, Portuguese, Greek, or English, all in native on-camera delivery. Reach multicultural and international markets without hiring six creators.",
+    accent: "border-l-teal-400",
   },
   {
-    title: "UGC Long-Form Video",
+    title: "UGC Short-Form Video",
     description:
-      "3–5 minute deeper content for landing pages, tutorial libraries, or YouTube ads. Great for product demos and methodology pieces.",
-    accent: "border-l-orange-400",
+      "60–90s authentic content for your channels. Hook → demo → payoff, built to perform in feed and paid ads.",
+    accent: "border-l-rose-400",
   },
   {
     title: "UGC Instagram Reels",
     description:
-      "Vertical, native, authentic. Same storytelling style optimized for Instagram with strong hooks built for short attention spans.",
+      "Vertical, native, scroll-stopping. The same hooks driving my reels past 500K views, optimized for your brand.",
     accent: "border-l-purple-400",
   },
   {
-    title: "Multi-Language Delivery",
+    title: "UGC Long-Form Video",
     description:
-      "Same campaign delivered in 2–3 languages from one shoot. Reach Spanish, English, Mandarin, Cantonese, Portuguese, or Greek audiences with native delivery.",
-    accent: "border-l-teal-400",
+      "3–5 minute content for landing pages, tutorials, or YouTube ads. Ideal for product demos and deeper storytelling.",
+    accent: "border-l-orange-400",
   },
+];
+
+const IG_REELS: { shortcode: string; views?: string; note: string }[] = [
+  {
+    shortcode: "DZLRHKvBwyR",
+    views: "580K",
+    note: "Reciting a classic Brazilian meme — my biggest reel, 99K likes.",
+  },
+  {
+    shortcode: "DZI-_3Zhbet",
+    views: "419K",
+    note: "Nailing the old Hong Kong MTR announcement — HK audiences shared it everywhere.",
+  },
+];
+
+const UGC_SAMPLES: {
+  type: "youtube" | "reel";
+  src: string;
+  tag: string;
+  title: string;
+  note: string;
+}[] = [
+  {
+    type: "youtube",
+    src: "https://www.youtube.com/embed/a0sUo31XFUY?start=375&end=417",
+    tag: "Brand Integration",
+    title: "In-content product plug",
+    note: "A natural integration from one of my videos (Speakeasy). The same approach I'd take for your brand. Woven into the story, not a hard sell.",
+  },
+  {
+    type: "reel",
+    src: "DYmy5nEh0pe",
+    tag: "UGC Reel",
+    title: "Local Store showcase — Hong Kong",
+    note: "Featuring a noodle shop through a real interaction in Cantonese, the way I'd showcase a brand or location.",
+  },
+  // Two product demos coming soon — add new { type, src, tag, title, note } entries here.
 ];
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
@@ -390,22 +427,13 @@ export default function CreatorPage() {
             </h2>
             <div className="space-y-5 text-stone-700 text-lg md:text-xl leading-relaxed">
               <p>
-                A language learning content creator based in California. For the
-                past two years I&apos;ve been making language learning content on
-                YouTube. That&apos;s grown into{" "}
+                A multilingual creator based in California. For two years
+                I&apos;ve documented my journey through learning six languages,
+                ordering in Cantonese in Hong Kong, learning my
+                grandmother&apos;s Greek, surprising strangers in their native
+                tongue. I've created over{" "}
                 <span className="font-semibold text-stone-900">
-                  65 videos, 15K+ subscribers, and 7.45M+ lifetime views
-                </span>
-                .
-              </p>
-              <p>
-                What started as documenting my own journey through six languages
-                has grown into a channel brands now reach out for. The audience
-                watches because it&apos;s real. I&apos;m ordering food in Cantonese in
-                Hong Kong, learning my grandmother&apos;s Greek dialect, surprising
-                strangers in their native languages. Recent uploads pull{" "}
-                <span className="font-semibold text-stone-900">
-                  150K+ views in a single month
+                  65 videos, 20K+ cumulative subscribers, and 8M+ lifetime views
                 </span>
                 .
               </p>
@@ -446,7 +474,8 @@ export default function CreatorPage() {
         </div>
       </section>
 
-      {/* ─── Featured YouTube Videos ──────────────────────────────────────── */}
+      {/* ─── Organic Reach (Instagram) — DISABLED for now. Flip `false` to `true` below to re-enable. ─── */}
+      {false && (
       <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <motion.p
@@ -455,7 +484,7 @@ export default function CreatorPage() {
             viewport={{ once: true }}
             className="text-stone-500 text-sm tracking-[0.25em] uppercase mb-4 text-center font-medium"
           >
-            Featured Content
+            Organic Reach
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -464,9 +493,9 @@ export default function CreatorPage() {
             className={`${playfair.className} text-stone-900 text-4xl md:text-6xl text-center mb-6`}
             style={{ fontWeight: 700 }}
           >
-            More from{" "}
+            Short-form that{" "}
             <span className="italic text-rose-600" style={{ fontWeight: 500 }}>
-              YouTube
+              performs
             </span>
           </motion.h2>
           <motion.p
@@ -476,68 +505,129 @@ export default function CreatorPage() {
             transition={{ delay: 0.15 }}
             className="text-stone-600 text-base md:text-lg text-center max-w-2xl mx-auto mb-16"
           >
-            Two more performing pieces showing range beyond the top three above.
+            A few of my organic reels — the same hooks and on-camera energy I
+            bring to brand work.
           </motion.p>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {FEATURED_VIDEOS.slice(3, 5).map((video, i) => (
-              <VideoCard key={video.id} video={video} index={i} />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            {IG_REELS.map((reel, i) => (
+              <motion.div
+                key={reel.shortcode}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg ring-1 ring-stone-900/5">
+                  {reel.views && (
+                    <span className="absolute top-3 left-3 z-10 rounded-full bg-rose-600 px-3 py-1 text-white text-xs font-bold shadow-lg pointer-events-none">
+                      {reel.views} views
+                    </span>
+                  )}
+                  <div className="aspect-[9/16]">
+                    <iframe
+                      src={`https://www.instagram.com/reel/${reel.shortcode}/embed/`}
+                      className="w-full h-full"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                <p className="text-stone-600 text-sm mt-3 px-1">{reel.note}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
+      )}
 
-      {/* ─── Instagram Reel ───────────────────────────────────────────────── */}
+      {/* ─── Sample Work / Demos ──────────────────────────────────────────── */}
       <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-stone-500 text-sm tracking-[0.25em] uppercase mb-4 text-center font-medium"
+          >
+            Sample Work
+          </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className={`${playfair.className} text-stone-900 text-4xl md:text-6xl text-center mb-16`}
+            className={`${playfair.className} text-stone-900 text-4xl md:text-6xl text-center mb-6`}
             style={{ fontWeight: 700 }}
           >
-            From{" "}
+            What I&apos;d make{" "}
             <span className="italic text-rose-600" style={{ fontWeight: 500 }}>
-              Instagram
+              for you
             </span>
           </motion.h2>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-2 gap-10 md:gap-16 items-center"
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="text-stone-600 text-base md:text-lg text-center max-w-2xl mx-auto mb-16"
           >
-            <div className="rounded-2xl overflow-hidden bg-white shadow-lg mx-auto w-full max-w-sm">
-              <div className="aspect-[9/16]">
-                <iframe
-                  src="https://www.instagram.com/reel/DYmy5nEh0pe/embed/"
-                  className="w-full h-full"
-                  allowFullScreen
-                  scrolling="no"
-                />
-              </div>
-            </div>
-            <div>
-              <span className="inline-block rounded-full bg-rose-50 text-rose-700 border border-rose-200 px-3 py-1.5 text-xs tracking-[0.2em] uppercase font-bold mb-5">
-                Featured Reel
-              </span>
-              <h3
-                className={`${playfair.className} text-stone-900 text-3xl md:text-4xl mb-6 leading-tight`}
-                style={{ fontWeight: 700 }}
+            Brand-ready pieces — how I integrate and showcase a product. More
+            product demos coming soon.
+          </motion.p>
+
+          <div className="space-y-14 md:space-y-20">
+            {UGC_SAMPLES.map((s) => (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6 }}
+                className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
               >
-                Ordering at a noodle shop in Hong Kong
-              </h3>
-              <p className="text-stone-700 text-lg md:text-xl leading-relaxed">
-                Showing off a local noodle spot in Hong Kong, speaking the local
-                language while ordering and chatting with the owner. UGC-style
-                content that highlights a real place through a real interaction,
-                the way I&apos;d showcase a brand or product.
-              </p>
-            </div>
-          </motion.div>
+                <div
+                  className={
+                    s.type === "reel" ? "mx-auto w-full max-w-xs" : "w-full"
+                  }
+                >
+                  <div
+                    className={`overflow-hidden rounded-2xl shadow-xl shadow-stone-900/15 ring-1 ring-stone-900/5 bg-stone-900 ${
+                      s.type === "reel" ? "aspect-[9/16]" : "aspect-video"
+                    }`}
+                  >
+                    {s.type === "youtube" ? (
+                      <iframe
+                        src={s.src}
+                        title={s.title}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <iframe
+                        src={`https://www.instagram.com/reel/${s.src}/embed/`}
+                        className="w-full h-full"
+                        allowFullScreen
+                      />
+                    )}
+                  </div>
+                </div>
+                <div>
+                  <span className="inline-block rounded-full bg-rose-50 text-rose-700 border border-rose-200 px-3 py-1.5 text-xs tracking-[0.2em] uppercase font-bold mb-5">
+                    {s.tag}
+                  </span>
+                  <h3
+                    className={`${playfair.className} text-stone-900 text-2xl md:text-4xl mb-5 leading-tight`}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {s.title}
+                  </h3>
+                  <p className="text-stone-700 text-lg md:text-xl leading-relaxed">
+                    {s.note}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -574,48 +664,6 @@ export default function CreatorPage() {
             pages, paid ads, social channels. Multi-language delivery available
             from one shoot.
           </motion.p>
-
-          {/* Sample integration — real brand plug from his own video */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto mb-16"
-          >
-            <div className="text-center mb-6">
-              <span className="inline-block rounded-full bg-rose-50 text-rose-700 border border-rose-200 px-3 py-1.5 text-xs tracking-[0.2em] uppercase font-bold mb-4">
-                Sample Integration
-              </span>
-              <h3
-                className={`${playfair.className} text-stone-900 text-2xl md:text-3xl mb-3 leading-tight`}
-                style={{ fontWeight: 700 }}
-              >
-                Here&apos;s what an integration looks like in my content
-              </h3>
-              <p className="text-stone-600 text-base md:text-lg max-w-xl mx-auto">
-                A clip from one of my YouTube videos where I plug Speakeasy. The
-                same approach I&apos;d take for your brand: natural, in the flow
-                of the story, not a hard sell.
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-2xl shadow-xl shadow-stone-900/15 ring-1 ring-stone-900/5 bg-stone-900">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/a0sUo31XFUY?start=375&end=417"
-                  title="Sample brand integration"
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-            <p className="text-stone-500 text-xs md:text-sm text-center mt-3 italic">
-              From &quot;You Win $$ If I Don&apos;t Know Your Language&quot; ·
-              6:15–6:57
-            </p>
-          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {SERVICES.map((service, i) => (
@@ -766,81 +814,5 @@ export default function CreatorPage() {
         </div>
       </footer>
     </div>
-  );
-}
-
-// ─── Subcomponent ────────────────────────────────────────────────────────────
-
-type Video = (typeof FEATURED_VIDEOS)[number];
-
-function VideoCard({
-  video,
-  index,
-  wide = false,
-}: {
-  video: Video;
-  index: number;
-  wide?: boolean;
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay: index * 0.05 }}
-      className="rounded-2xl overflow-hidden bg-white shadow-lg shadow-stone-200/50 border border-white"
-    >
-      <div className="aspect-video bg-stone-900">
-        <iframe
-          src={`https://www.youtube.com/embed/${video.id}`}
-          title={video.title}
-          className="w-full h-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
-      </div>
-      <div className={wide ? "p-6 md:p-10" : "p-5 md:p-7"}>
-        <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="inline-block rounded-full bg-rose-50 text-rose-700 border border-rose-200 px-3 py-1 text-xs tracking-[0.15em] uppercase font-bold">
-            {video.tag}
-          </span>
-          <span className="inline-block rounded-full bg-stone-100 text-stone-700 border border-stone-200 px-3 py-1 text-xs tracking-[0.15em] uppercase font-semibold">
-            {video.niche}
-          </span>
-          <span className="text-stone-500 text-sm ml-1 font-medium">
-            {video.views} views
-          </span>
-        </div>
-        <h3
-          className={`${playfair.className} text-stone-900 text-xl md:text-2xl mb-3 leading-snug`}
-          style={{ fontWeight: 700 }}
-        >
-          {video.title}
-        </h3>
-        <p className="text-stone-700 text-base md:text-lg leading-relaxed mb-4">
-          {video.description}
-        </p>
-        <a
-          href={video.driveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-stone-500 hover:text-rose-600 transition-colors"
-        >
-          <svg
-            width="13"
-            height="13"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          Download raw file
-        </a>
-      </div>
-    </motion.div>
   );
 }
